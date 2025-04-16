@@ -39,22 +39,39 @@
   }
   
   /* Sobre Nosotros */
-  .nosotros h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
+  .container-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
   }
-  
-  .nosotros p {
-    font-size: 1.1rem;
+
+  .texto {
+    flex: 1;
+    max-width: 600px;
     text-align: justify;
   }
-  
-  .nosotros img {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+
+  .imagen img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
   }
-  
+
+  @media (min-width: 768px) {
+    .container-nosotros {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .texto {
+      padding-right: 2rem;
+    }
+  }
+/* Sobre nosotros */
+
   /* Eventos */
   .event {
     margin-bottom: 2rem;
@@ -104,12 +121,12 @@
   .footer .social-links i {
     font-size: 1.5rem;
     margin: 0 10px;
-    color: white;
+    color: rgb(228, 36, 36);
     transition: color 0.3s;
   }
   
   .footer .social-links i:hover {
-    color: #ffca28;
+    color: green;
   }
   
   .footer .copyright {
