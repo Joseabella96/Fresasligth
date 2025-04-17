@@ -43,31 +43,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   .texto {
     flex: 1;
-    max-width: 600px;
+    max-width: 550px;
     text-align: justify;
   }
 
   .imagen img {
     width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
   }
 
   @media (min-width: 768px) {
     .container-nosotros {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem; /* Menos espacio entre texto e imagen */
     }
 
     .texto {
-      padding-right: 2rem;
+      padding-right: 1rem;
     }
   }
 /* Sobre nosotros */
@@ -173,4 +175,11 @@
       max-width: 150px;
     }
   }
+
+  /*index fin*/
+
+  /*productos*/
+  /*productos*/
+
+
   
