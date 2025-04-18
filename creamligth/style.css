@@ -33,11 +33,30 @@
   }
   
   /* Carousel */
-  .carousel-inner img {
-    height: 500px;
-    object-fit: cover;
+  .imagen-portada {
+    width: 100%;
+    max-height: 500px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; 
   }
-  
+
+  .imagen-portada img {
+    width: auto;
+    height: 100%;
+    object-fit: contain; /* Muestra toda la imagen sin deformarla */
+  }
+
+  @media (max-width: 768px) {
+    .imagen-portada {
+      max-height: 320px;
+    }
+  }
+  /* Carousel */
+
+
   /* Sobre Nosotros */
   .container-nosotros {
     display: flex;
@@ -90,7 +109,7 @@
   
   .event h2 {
     font-size: 1.5rem;
-    color: #004e79;
+    color: #f35925;
   }
   
   .event p {
