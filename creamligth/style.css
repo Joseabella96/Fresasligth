@@ -39,7 +39,7 @@
   /* Carousel */
   .imagen-portada {
     width: 100%;
-    height: 500px; /* Ajusta este valor si la quieres más baja */
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@
   }
   
   .imagen-portada img:hover {
-    transform: scale(1.08); /* Zoom al pasar el cursor */
+    transform: scale(1.58); 
   }
   
   @media (max-width: 768px) {
@@ -165,20 +165,34 @@
     margin: 0.5rem 1rem;
   }
   
-  .footer .social-links i {
-    font-size: 1.5rem;
-    margin: 0 10px;
-    color: rgb(228, 36, 36);
-    transition: color 0.3s;
-  }
-  
-  .footer .social-links i:hover {
-    color: green;
+  .footer {
+    background-color: #fff0f5;
+    color: #333;
   }
 
-  .footer .social-links :hover {
-    transform: scale(2.05);
+  .footer .redes-sociales a i {
+    font-size: 1.8rem;
+    margin: 0 12px;
+    color: #555;
+   /* transition: transform 0.3s ease, color 0.3s ease;*/
   }
+
+  .footer .redes-sociales a:hover i {
+    color: #d81b60; /* Cambia este color a tu color de marca si deseas */
+  }
+
+  .footer p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 576px) {
+    .footer .redes-sociales a i {
+      font-size: 1.5rem;
+      margin: 0 8px;
+    }
+  }
+  
   
   .footer .copyright {
     font-size: 0.9rem;
@@ -228,6 +242,39 @@
   /*index fin*/
 
   /*productos*/
+  .producto-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+  .producto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .producto-card img {
+    height: 250px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .producto-card button {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .producto-card button:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 576px) {
+    .producto-card img {
+      height: 200px;
+    }
+  }
+
+  
+  
   /*productos*/
 
 
