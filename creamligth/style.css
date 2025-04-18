@@ -31,27 +31,40 @@
   #logo img {
     height: 150px;
   }
+
+  #logo img:hover{
+    transform: scale(1.03);
+  }
   
   /* Carousel */
   .imagen-portada {
     width: 100%;
-    max-height: 500px; 
-    overflow: hidden;
+    height: 500px; /* Ajusta este valor si la quieres más baja */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; 
+    overflow: hidden;
+    background-color: #fff;
   }
-
+  
   .imagen-portada img {
+    height: 80%; /* Imagen más pequeña por defecto */
     width: auto;
-    height: 100%;
-    object-fit: contain; /* Muestra toda la imagen sin deformarla */
+    object-fit: contain;
+    transition: transform 0.4s ease; /* Efecto suave */
   }
-
+  
+  .imagen-portada img:hover {
+    transform: scale(1.08); /* Zoom al pasar el cursor */
+  }
+  
   @media (max-width: 768px) {
     .imagen-portada {
-      max-height: 320px;
+      height: 300px;
+    }
+  
+    .imagen-portada img {
+      height: 75%;
     }
   }
   /* Carousel */
@@ -79,6 +92,10 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.08);
   }
 
+  .imagen img:hover{
+    transform: scale(1.01);
+  }
+
   @media (min-width: 768px) {
     .container-nosotros {
       flex-direction: row;
@@ -93,30 +110,35 @@
   }
 /* Sobre nosotros */
 
-  /* Eventos */
-  .event {
-    margin-bottom: 2rem;
+  /* Productos */
+  .producto {
     text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: #fff8fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
   }
-  
-  .event img {
+
+  .producto:hover {
+    transform: scale(1.03);
+  }
+
+  .producto img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
   }
-  
-  .event h2 {
-    font-size: 1.5rem;
-    color: #f35925;
+
+  .producto p {
+    font-weight: 500;
+    color: #d81b60;
   }
-  
-  .event p {
-    font-size: 1rem;
-    text-align: justify;
-    padding: 0 1rem;
-  }
+ /* Productos */
+
   
   /* Footer */
   .footer {
@@ -128,6 +150,10 @@
   .footer .img-fluid1 {
     max-width: 200px;
     margin: 1rem auto;
+  }
+
+  .footer .img-fluid1:hover{
+    transform: scale(1.05);
   }
   
   .footer ul {
@@ -148,6 +174,10 @@
   
   .footer .social-links i:hover {
     color: green;
+  }
+
+  .footer .social-links :hover {
+    transform: scale(2.05);
   }
   
   .footer .copyright {
