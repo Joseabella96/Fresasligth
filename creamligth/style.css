@@ -202,21 +202,31 @@
   /* Botón hacia arriba */
   .arrow {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    
+    bottom: 20px;  /* Coloca la flecha en la parte inferior */
+    right: 20px;   /* La coloca a la derecha */
+    background-color: #fff;  /* Fondo blanco para la flecha */
+    border-radius: 50%; /* Hace que el fondo sea redondeado */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Agrega una sombra sutil */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación de opacidad */
+    opacity: 0; /* Inicialmente invisible */
+    pointer-events: none; /* No interactúa con el ratón hasta que aparezca */
+  }
+  
+  .arrow.visible {
+    opacity: 1; /* Hace la flecha visible */
+    pointer-events: all; /* Permite la interacción con el ratón cuando es visible */
+  }
+  
+  .arrow:hover {
+    transform: scale(1.1); /* Aumenta un poco el tamaño al pasar el mouse */
   }
   
   .arrow img {
-    width: 40px;
-    transition: transform 0.3s;
-    color: rgb(248, 0, 0);
+    display: block;
+    margin: 0 auto; /* Centra la flecha dentro del contenedor */
   }
   
-  .arrow:hover img {
-    transform: scale(1.2);
-  }
   
   /* Responsive */
   @media screen and (max-width: 768px) {
@@ -259,6 +269,28 @@
     transition: all 0.3s ease;
   }
   
+  .promo-card {
+    animation: pulsar 1.5s infinite; /* Activa la animación de palpitación de forma predeterminada */
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Animación de palpitación */
+  @keyframes pulsar {
+    0% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.05); /* Aumenta un poco el tamaño */
+    }
+    100% {
+      transform: scale(1); /* Vuelve al tamaño original */
+    }
+  }
+
+  /* Puedes agregar una sombra o cualquier estilo adicional si lo deseas */
+  .promo-card {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
 
   @media (max-width: 576px) {
     .producto-card img {

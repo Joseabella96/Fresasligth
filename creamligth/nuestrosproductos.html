@@ -271,7 +271,12 @@
 <!-- footer -->
   <!-- footer -->
 
-  <a href="#" class="arrow"><i><img src="./Imagenes/up-arrow.png" alt="" width="50px" /></i></a>
+  <a href="#" class="arrow">
+    <i>
+      <img src="./Imagenes/up-arrow.png" alt="Flecha hacia arriba" width="50px" />
+    </i>
+  </a>
+  
 
 
 
@@ -281,6 +286,29 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+
+    <script>
+    // Detecta el desplazamiento de la página
+window.addEventListener('scroll', function() {
+  const arrow = document.querySelector('.arrow');
+  
+  // Si la página ha sido desplazada hacia abajo más de 200px, muestra la flecha
+  if (window.scrollY > 200) {
+    arrow.classList.add('visible');
+  } else {
+    arrow.classList.remove('visible');
+  }
+});
+
+// Desplazamiento suave al hacer clic
+document.querySelector('.arrow').addEventListener('click', function(e) {
+  e.preventDefault(); // Previene la acción predeterminada del enlace
+  window.scrollTo({
+    top: 0,  // Se desplazará al inicio de la página
+    behavior: 'smooth' // Desplazamiento suave
+  });
+});
+    </script>
 </body>
 
 </html>
